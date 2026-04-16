@@ -16,7 +16,7 @@ import AdditionalSettings from "./pages/AdditionalSettings"
 //dhanoop
 import JobStatusPage from './pages/JobStatusPage'
 import JobDetailsPage from './pages/JobDetailsPage'
-import RelationshipGoalsPage from './pages/relationshipGoalsPage'
+import RelationshipGoalsPage from './pages/RelationshipGoalsPage'
 import JobSeekerPage from './pages/JobSeekerPage'
 import Error403Page from './pages/Error403Page'
 import Error404Page from './pages/Error404Page'
@@ -56,9 +56,9 @@ import Subscription from "./pages/subscription";
 import SideMenus from './pages/SideMenus';
 import PrivacySettings from './pages/PrivacySettings';
 import Settings from './pages/Settings';
-import Help from './Pages/Help';
-import StorageAndData from './Pages/StorageAndData';
-import Invite from './Pages/Invite';
+import Help from './pages/Help';
+import StorageAndData from './pages/StorageAndData';
+import Invite from './pages/Invite';
 
 // anurag
 import Reject from './pages/Reject';

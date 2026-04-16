@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from "react";
 import "@fontsource/aldrich";
-const tabs = ["Near by", "Designation", "Qualification"];
+const tabs = ["Nearby", "Designation", "Qualification"];
 
 const CategoryToggleBar = ({handleQualification, handleDesignation}) => {
-  const [activeTab, setActiveTab] = useState("Near by");
+  const [activeTab, setActiveTab] = useState("Nearby");
 
   useEffect(() => {
     if (activeTab === "Designation") {
@@ -49,7 +49,7 @@ const CategoryToggleBar = ({handleQualification, handleDesignation}) => {
             "
             style={{
               transform:
-                activeTab === "Near by"
+                activeTab === "Nearby"
                   ? "translateX(0%)"
                   : activeTab === "Designation"
                   ? "translateX(100%)"
@@ -58,20 +58,40 @@ const CategoryToggleBar = ({handleQualification, handleDesignation}) => {
           />
 
           {/* Tabs */}
-          <div className="relative z-10 flex">
+          {/* <div className="relative z-10 flex"> */}
+          <div className="relative z-10 flex overflow-x-auto no-scrollbar">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
+                // className={`
+                //   flex-1
+                //   py-2.5
+                //   lg:py-4
+                //   text-sm
+                //   md:text-base
+                //   lg:text-xl
+                //   font-semibold
+                //   rounded-full
+                //   transition-colors
+                //   focus:outline-none
+                //   focus-visible:ring-2
+                //   focus-visible:ring-blue-400
+                //   cursor-pointer
+                //   ${
+                //     activeTab === tab
+                //       ? "text-blue-600"
+                //       : "text-gray-700 hover:text-gray-900"
+                //   }
+                // `}
                 className={`
                   flex-1
-                  py-2.5
-                  lg:py-4
-                  text-sm
-                  md:text-base
-                  lg:text-xl
+                  py-1.5 sm:py-2 md:py-3
+                  px-1 sm:px-2
+                  text-xs sm:text-sm md:text-base lg:text-lg
                   font-semibold
                   rounded-full
+                  whitespace-nowrap
                   transition-colors
                   focus:outline-none
                   focus-visible:ring-2

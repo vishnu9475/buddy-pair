@@ -57,7 +57,7 @@ const Page12 = () => {
           </section>
 
           {/* CATEGORY TOGGLE */}
-          <section className="px-4 mt-8 w-full max-w-5xl">
+          <section className="px-4 mt-8 w-full max-w-full sm:max-w-xl lg:max-w-5xl">
             <CategoryToggleBar 
               handleDesignation={handleDesignation}
               handleQualification={handleQualification}
