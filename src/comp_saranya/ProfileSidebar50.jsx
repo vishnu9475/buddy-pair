@@ -7,6 +7,7 @@ const ProfileSidebar50 = ({
   open = true,
   onClose = () => { },
   inline = false,
+  sidebarBg = "bg-[#6B4468]/95",
   user = {
     name: "Stone Stellar",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
@@ -49,7 +50,7 @@ const ProfileSidebar50 = ({
       {/* Sidebar */}
       <div className={`
         ${inline ? "relative h-fit max-h-full w-full max-w-[250px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[350px] shrink-0" : `fixed h-fit max-h-[100vh] top-0 right-0 z-100 w-full max-w-[250px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[350px] transform transition-transform duration-300 ${open ? "translate-x-0" : "translate-x-full"}`}
-        bg-[#6B4468]/95 shadow-xl px-4 sm:px-5 md:px-6 lg:px-7 pb-2 sm:pb-3 md:pb-4 lg:pb-5 ${inline ? 'pt-1 sm:pt-2' : 'pt-4 sm:pt-5 md:pt-6 lg:pt-7'} border-l border-[#6B4468] text-white overflow-y-auto 
+        ${sidebarBg} shadow-xl px-4 sm:px-5 md:px-6 lg:px-7 pb-2 sm:pb-3 md:pb-4 lg:pb-5 ${inline ? 'pt-1 sm:pt-2' : 'pt-4 sm:pt-5 md:pt-6 lg:pt-7'} border-l border-[#6B4468] text-white overflow-y-auto 
       `}>
         {/* CLOSE BUTTON */}
         {!inline && (
