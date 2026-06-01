@@ -118,10 +118,12 @@ const Designation = () => {
       </div>
 
       {/* ✅ MOBILE SIDEBAR (OVERLAY) */}
-      <ProfileSidebar50
-        open={isSidebarOpen}
-        onClose={() => setIsSidebarOpen(false)}
-      />
+      <div className="lg:hidden">
+        <ProfileSidebar50
+          open={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+        />
+      </div>
 
       {/* FOOTER */}
       <AppFooter />

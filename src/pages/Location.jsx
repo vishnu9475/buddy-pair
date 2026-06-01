@@ -1,29 +1,49 @@
+import { useState } from "react";
 import NavHeader from "../compo_sanjo/NavHeader";
 import MatchList from "../compo_sanjo/MatchList";
 import AppFooter from "../comp_vishnu/AppFooter";
 import StatItemList from "../compo_sanjo/StatItemList";
+import ProfileSidebar50 from "../comp_saranya/ProfileSidebar50";
 import { useNavigate } from "react-router-dom";
 
 const Location = () => {
   const navigate = useNavigate();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <div className="w-full min-h-screen bg-[#FDF7FF] font-sans relative pb-32">
-      <div className="w-full px-4 md:px-6 pt-2">
-        {/* Header */}
-        <NavHeader
-          title="Location"
-          onBack={() => navigate(-1)}
-          onFilter={() => console.log("Filter")}
-        />
+    <div className="w-full min-h-screen bg-[#FDF7FF] font-sans pb-32">
 
-        {/* Stats Section */}
-        <StatItemList />
+      {/* MAIN LAYOUT */}
+      <div className="flex w-full">
 
-        {/* Matches List */}
-        <MatchList />
+        {/* LEFT CONTENT */}
+        <div className="flex-1 px-4 md:px-6 pt-2">
+          <NavHeader
+            title="Location"
+            onBack={() => navigate(-1)}
+            onFilter={() => console.log("Filter")}
+            onProfileClick={() => setIsSidebarOpen(true)}
+          />
+
+          <StatItemList />
+          <MatchList />
+        </div>
+
+        {/* RIGHT SIDEBAR (DESKTOP ONLY) */}
+        <div className="hidden lg:block w-[320px]">
+          <ProfileSidebar50 inline />
+        </div>
       </div>
 
-      {/* Footer Navigation */}
+      {/* ✅ MOBILE SIDEBAR (OVERLAY) */}
+      <div className="lg:hidden">
+        <ProfileSidebar50
+          open={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+        />
+      </div>
+
+      {/* FOOTER */}
       <AppFooter />
     </div>
   );

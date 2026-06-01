@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //vishnu
 import InterestedFeedPage from './pages/InterestedFeedPage.jsx';
@@ -142,6 +141,9 @@ function App() {
         <Route path="/discover" element={<Discover />} />
         <Route path="/notification" element={<NotificationPage />} />
         <Route path="/shortlistedby" element={<ShortlistedBy />} />
+
+        {/* Catch-all route for 404 - must be last */}
+        <Route path="*" element={<Error404Page />} />
 
       </Routes>
     </>

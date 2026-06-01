@@ -122,7 +122,7 @@ function Sent() {
 
       {/* ✅ RIGHT SIDE (DESKTOP ONLY) */}
       <div className="hidden lg:block w-[320px]">
-        <ProfileSidebar50 inline inline sidebarBg="bg-[#4B164C]" />
+        <ProfileSidebar50 inline sidebarBg="bg-[#4B164C]" />
       </div>
 
       {/* ✅ MOBILE SIDEBAR (overlay) */}
