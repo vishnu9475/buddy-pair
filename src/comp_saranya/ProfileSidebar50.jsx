@@ -15,7 +15,7 @@ const ProfileSidebar50 = ({
     isPrime: true,
   },
   menuItems = [
-    { name: "My Profile", path: "/homePage" },
+    { name: "My Profile", path: "/userprofile" },
     { name: "Sent Request", path: "/sent" },
     { name: "Viewed My Profile", path: "/viewed-profile" },
     { name: "Accept Request", path: "/accept" },

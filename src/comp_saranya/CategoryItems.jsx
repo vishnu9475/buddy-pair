@@ -4,10 +4,10 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 const menu = [
     { name: "Dating", path: "/homePage" },
-    { name: "Matrimony", path: "/" },
-    { name: "E commerce", path: "/" },
-    { name: "Study Abroad", path: "/" },
-    { name: "Job Portal", path: "/" },
+    { name: "Matrimony", path: "" },
+    { name: "E commerce", path: "" },
+    { name: "Study Abroad", path: "" },
+    { name: "Job Portal", path: "" },
 ];
 
 const CategoryItems = ({ open, onclose, inline = false }) => {
